@@ -1,0 +1,6 @@
+
+
+steps:
+- name: 'gcr.io/cloud-builders/go'
+  args: ['test', '-v','src/soma']
+  env: ['PROJECT_ROOT=src/soma']
