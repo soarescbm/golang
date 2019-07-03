@@ -20,5 +20,7 @@ steps:
 
 images: ['gcr.io/$PROJECT_ID/soma']
 
+steps:
+
 - id: 'Run soma'
   name: 'gcr.io/$PROJECT_ID/soma'
