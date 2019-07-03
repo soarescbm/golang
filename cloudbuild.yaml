@@ -1,5 +1,5 @@
 
-#desafio CI
+#desafio CI - Install, Test, Push...
 steps:
 
 - id: 'Install soma'
@@ -14,7 +14,7 @@ steps:
   env: ['PROJECT_ROOT=soma']
 
 
-- id: 'Build imagem soma'
+- id: 'Build imagem soma e push'
   name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--tag=gcr.io/$PROJECT_ID/soma', '.']
 
