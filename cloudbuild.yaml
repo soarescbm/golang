@@ -1,5 +1,5 @@
 
-
+#desafio CI
 steps:
 
 - id: 'Install soma'
@@ -20,7 +20,3 @@ steps:
 
 images: ['gcr.io/$PROJECT_ID/soma']
 
-steps:
-
-- id: 'Run soma'
-  name: 'gcr.io/$PROJECT_ID/soma'
