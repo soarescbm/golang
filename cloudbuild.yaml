@@ -4,14 +4,17 @@ steps:
 
 - id: 'Install soma'
   name: 'gcr.io/cloud-builders/go'
-  args: ['install', '.']
-  env: ['PROJECT_ROOT=soma']
+  args: ['install', 'soma']
+#  args: ['install', '.']
+  env: ['GOPATH=.']
+#  env: ['PROJECT_ROOT=soma']
 
 
 - id: 'Test soma'
   name: 'gcr.io/cloud-builders/go'
-  args: ['test', '-v','.']
-  env: ['PROJECT_ROOT=soma']
+  args: ['test', '-v','soma']
+  env: ['GOPATH=.']
+#  env: ['PROJECT_ROOT=soma']
 
 
 - id: 'Build imagem soma e push'
