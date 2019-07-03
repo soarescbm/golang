@@ -6,15 +6,3 @@ steps:
   name: 'gcr.io/cloud-builders/go'
   args: ['install', '.']
   env: ['PROJECT_ROOT=soma']
-
-
-- id: 'Test'
-  name: 'gcr.io/cloud-builders/go'
-  args: ['test', '-v','.']
-  env: ['PROJECT_ROOT=soma']
-
-
-- id: 'Run soma'
-  name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/$PROJECT_ID/soma', '.']
-  images: ['gcr.io/$PROJECT_ID/soma']
